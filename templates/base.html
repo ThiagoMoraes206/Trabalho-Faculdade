@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Calculadora Web{% endblock %}</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+
+<body>
+
+    <header class="topo">
+
+        <a class="marca" href="{{ url_for('index') }}">
+            Calculadora Web
+        </a>
+
+        <nav>
+            <a href="{{ url_for('index') }}">Início</a>
+            <a href="{{ url_for('soma_page') }}">Soma</a>
+            <a href="{{ url_for('subtracao_page') }}">Subtração</a>
+            <a href="{{ url_for('multiplicacao_page') }}">Multiplicação</a>
+            <a href="{{ url_for('divisao_page') }}">Divisão</a>
+        </nav>
+
+    </header>
+
+    <main class="conteudo">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        Projeto didático — Python, Flask, HTML e JavaScript
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #e9eef8;
+    background: #101827;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.topo {
+    background: #172438;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #2c3e58;
+}
+
+.marca {
+    color: white;
+    font-weight: bold;
+    font-size: 1.15rem;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+nav a, .atalhos a {
+    color: #dce8fa;
+    text-decoration: none;
+    padding: 9px 12px;
+    border-radius: 8px;
+}
+
+nav a:hover, .atalhos a:hover {
+    background: #2b4263;
+}
+
+.conteudo {
+    width: min(720px, 92%);
+    margin: auto;
+    padding: 55px 0;
+    flex: 1;
+    display: grid;
+    place-items: center;
+}
+
+.painel {
+    width: 100%;
+    background: #1b2a40;
+    border: 1px solid #30435e;
+    border-radius: 18px;
+    padding: 38px;
+    box-shadow: 0 18px 50px #0003;
+}
+
+.etiqueta {
+    color: #8fb8f5;
+    font-size: .75rem;
+    font-weight: bold;
+    letter-spacing: .13em;
+}
+
+h1 {
+    margin: 10px 0 14px;
+    font-size: 2.5rem;
+}
+
+.inicio > p:not(.etiqueta) {
+    color: #b9c7da;
+    line-height: 1.6;
+}
+
+.atalhos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 28px;
+}
+
+.atalhos a {
+    background: #263b58;
+}
+
+.form-calculo {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    margin-top: 28px;
+}
+
+.form-calculo label {
+    font-weight: 600;
+}
+
+.form-calculo input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #526783;
+    border-radius: 9px;
+    background: #111d2d;
+    color: white;
+    font-size: 1rem;
+}
+
+.simbolo {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #8fb8f5;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 12px;
+    padding: 14px;
+    border: 0;
+    border-radius: 9px;
+    background: #3678d4;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2865b8;
+}
+
+.resultado {
+    min-height: 25px;
+    margin: 24px 0 0;
+    padding: 14px;
+    border-radius: 9px;
+    background: #132238;
+    color: #a9d5ff;
+    font-weight: bold;
+}
+
+.resultado.erro {
+    color: #ffaaaa;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #8394aa;
+    font-size: .85rem;
+}
+
+@media (max-width: 600px) {
+    .topo {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .painel {
+        padding: 25px;
+    }
+}

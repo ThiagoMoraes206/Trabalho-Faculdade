@@ -1,22 +1,36 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Subtração</title>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-</head>
-<body>
-    <nav>
-        <a href="{{ url_for('index') }}">Início</a> |
-        <a href="{{ url_for('soma_page') }}">Soma</a> |
-        <a href="{{ url_for('subtracao_page') }}">Subtração</a>
-    </nav>
 
-    <h1>Operação de Subtração</h1>
-    <input type="number" id="valor1"><br><br>
-    <input type="number" id="valor2"><br><br>
-    <button onclick="calcularSubtracao()">Calcular Subtração</button>
+{% extends "base.html" %}
 
-    <h2 id="resultado"></h2>
-</body>
-</html>
+{% block title %}Subtração | Calculadora Web{% endblock %}
+
+{% block content %}
+
+<section class="painel calculadora">
+
+    <p class="etiqueta">OPERAÇÃO MATEMÁTICA</p>
+    <h1>Subtração</h1>
+
+    <form class="form-calculo" data-endpoint="/api/subtracao">
+
+        <label for="valor1">Primeiro valor</label>
+        <input type="number" id="valor1" name="valor1"
+               step="any" required>
+
+        <div class="simbolo">−</div>
+
+        <label for="valor2">Segundo valor</label>
+        <input type="number" id="valor2" name="valor2"
+               step="any" required>
+
+        <button type="submit">Calcular</button>
+
+    </form>
+
+    <p class="resultado" aria-live="polite">
+        O resultado aparecerá aqui.
+    </p>
+
+</section>
+
+{% endblock %}
+
